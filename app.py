@@ -5,7 +5,8 @@ from PIL import Image
 import io
 
 # Set your OpenAI API key
-openai.api_key = "YOUR_OPENAI_API_KEY"
+import os
+openai.api_key = os.getenv("YOUR_OPENAI_API_KEY")
 
 st.title("Interior Design Suggestions AI")
 st.write("Upload an image of your room, and get AI suggestions to improve it!")
